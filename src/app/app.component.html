@@ -1,5 +1,50 @@
-<div class="ui three buttons">
+<form class="ui large form segment">
+  <h1 class="ui header">Add a Link</h1>
+
+  <div class="field">
+      <label for="title">Title:</label>
+      <input name="title" #newtitle>
+  </div>
+
+  <div class="field">
+    <label for="link">Link:</label>
+    <input name="link" #newlink>
+  </div>
+
+  <button (click)="addArticle(newtitle, newlink)" class="ui positive right floated button">Submit Link</button>
+</form>
+
+<div class="ui grid posts">
+  <app-article 
+  *ngFor="let article of sortedArticle()"
+  [article]="article"
+  ></app-article>
+</div>
+
+
+<!-- <div class="ui three buttons">
   <button class="ui active button">One</button>
   <button class="ui button">Two</button>
   <button class="ui button">Three</button>
 </div>
+
+<div class="ui doubling five column grid">
+  <div class="column"><i class="wheelchair icon"></i>Wheelchair</div>
+  <div class="column"><i class="asl interpreting icon"></i>American Sign Language (ASL) Interpreting</div>
+  <div class="column"><i class="assistive listening systems icon"></i>Assistive Listening Systems</div>
+  <div class="column"><i class="audio description icon"></i>Audio Description</div>
+  <div class="column"><i class="blind icon"></i>Blind</div>
+  <div class="column"><i class="braille icon"></i>Braille</div>
+  <div class="column"><i class="deafness icon"></i>Deafness</div>
+  <div class="column"><i class="low vision icon"></i>Low Vision</div>
+  <div class="column"><i class="sign language icon"></i>Sign Language</div>
+  <div class="column"><i class="universal access icon"></i>Universal Access</div>
+  <div class="column"><i class="volume control phone icon"></i>Volume Control Phone</div>
+</div>
+<div class="ui divider"></div>
+
+<button class="ui primary basic button">Primary</button>
+<button class="ui secondary basic button">Secondary</button>
+<button class="ui positive basic button">Positive</button>
+<button class="ui negative basic button">Negative</button>
+ -->
